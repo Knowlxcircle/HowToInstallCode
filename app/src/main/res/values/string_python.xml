@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="how_to_install_python">How to install Python</string>
+    <string name="firstpy">1. Download the latest version of python on https://www.python.org/downloads/</string>
+    <string name="secondpy">2. Open the executable installer </string>
+    <string name="thirdpy">3. Select the add Python to PATH</string>
+    <string name="forthpy">4. Select all on Customize Installation </string>
+    <string name="fifthpy">5. Choose the optional feature on Advanced Options</string>
+    <string name="sixthpy">6. Open Command Prompt</string>
+    <string name="seventhpy">7. Type python on command prompt</string>
+    <string name="eigthpy">8. Open Visual Studio Code</string>
+    <string name="ninthpy">9. Open Extension and install Python extension</string>
+    <string name="tenthpy">10. Make a HelloWorld.py</string>
+    <string name="eleventhpy">11. Type print("Hello, World")</string>
+    <string name="twelvethpy">12. Run the file</string>
+    <string name="thirteenthpy">13. Congratulations you have installed Python on Visual Studio Code</string>
+
+</resources>
