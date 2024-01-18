@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Python"
+    tools:context=".Java"
     android:id="@+id/parentPython">
 
     <ScrollView
@@ -21,11 +21,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/python"
-                android:textSize="36sp"
                 android:gravity="center_horizontal"
+                android:text="Java"
                 android:textColor="@color/black"
-                />
+                android:textSize="36sp"
+                android:layout_marginTop="20dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,18 +33,23 @@
                 android:orientation="horizontal"
                 android:gravity="center_horizontal"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp">
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp">
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="87dp"
-                    android:src="@drawable/python_logo"
+                    android:src="@drawable/javas"
                     />
 
                 <TextView
                     android:layout_width="178dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
+                    android:text="title"
+                    android:id="@+id/titles"
+                    android:layout_marginStart="20dp"
                     />
 
             </LinearLayout>
@@ -52,7 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/how_to_install_python"
+                android:text="@string/how_to_install_java"
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
 
@@ -144,47 +149,8 @@
                     android:textColor="@color/black"
                     android:id="@+id/ninthpy"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="lorem_ipsum"
-                    android:textSize="12sp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:id="@+id/tenthpy"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="lorem_ipsum"
-                    android:textSize="12sp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:id="@+id/eleventhpy"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="lorem_ipsum"
-                    android:textSize="12sp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:id="@+id/twelfthpy"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="lorem_ipsum"
-                    android:textSize="12sp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:id="@+id/thirteenthpy"/>
-
 
             </LinearLayout>
-
-
-
 
 
         </LinearLayout>

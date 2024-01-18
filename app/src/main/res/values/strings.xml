@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">HowToInstallCode</string>
     <string name="python">Python</string>
+    <string name="made_by_play2_with_love">Made by Play2 with Love</string>
+    <string name="how_to_install_java">How to install Java</string>
+    <string name="how_to_install_html">How to install HTML</string>
+    <string name="how_to_install_javascript">How to install JavaScript</string>
+    <string name="how_to_install_csharp">How to install C#</string>
+    <string name="how_to_install_git">How to install GIT</string>
+
+
+    <string name="titlejava">Java is a object-oriented programming language. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA).</string>
+    <string name="firstjava">1. Download and Install the Java Development Kit (JDK) at https://www.oracle.com/java/technologies/downloads/</string>
+    <string name="secondjava">2. Open the Command Prompt or CMD.</string>
+    <string name="thirdjava">3. type java or java -version to check whether Java is already installed</string>
+    <string name="fourthjava">4. Install Java Extension in VSCode</string>
+    <string name="fifthjava">5. Go to File-Preferences and type java home</string>
+    <string name="sixthjava">6. click settings.json on Java > Jdt > Ls > Java : Home</string>
+    <string name="seventhjava">7. make sure there\'s "java.jdt.ls.java.home": #your java version</string>
+    <string name="eighthjava">8. Click ctrl+shift+p and type create java project.</string>
+    <string name="ninthjava">9. Congratulations now you are ready to program in Java.</string>
+
+    <string name="titlesjs">JavaScript often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.
+</string>
+    <string name="firstjs">1. Already installed on Visual Studio Code</string>
+
+    <string name="titleshtml">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.
+</string>
+    <string name="firsthtml">1. Already installed in Visual Studio Code.</string>
+
 
 </resources>

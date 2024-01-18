@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="titlespy">Python is a general purpose programming language. Python support programming paradigm and object oriented programming</string>
     <string name="how_to_install_python">How to install Python</string>
     <string name="firstpy">1. Download the latest version of python on https://www.python.org/downloads/</string>
     <string name="secondpy">2. Open the executable installer </string>

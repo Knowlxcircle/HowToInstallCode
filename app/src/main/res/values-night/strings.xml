@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="how_to_install_python">How to install Python</string>
+    <string name="made_by_play2_with_love">Made by Play2 with Love</string>
 </resources>
