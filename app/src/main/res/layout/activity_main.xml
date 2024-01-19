@@ -15,161 +15,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="60dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/cpp"
-                    android:contentDescription= "-"
-                    android:id="@+id/cpp"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/csharp"
-                    android:layout_marginStart="34dp"
-                    android:id="@+id/csharp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="30dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/cpp"
-                    android:contentDescription= "-"
-                    android:id="@+id/git"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/csharp"
-                    android:layout_marginStart="34dp"
-                    android:id="@+id/ruby"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="30dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/cpp"
-                    android:contentDescription= "-"
-                    android:id="@+id/c"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/csharp"
-                    android:layout_marginStart="34dp"
-                    android:id="@+id/html"/>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="30dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/cpp"
-                    android:contentDescription= "-"
-                    android:id="@+id/java"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/csharp"
-                    android:layout_marginStart="34dp"
-                    android:id="@+id/python"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="30dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/cpp"
-                    android:contentDescription= "-"
-                    android:id="@+id/rpl"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/csharp"
-                    android:layout_marginStart="34dp"
-                    android:id="@+id/javascript"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="30dp"
-                android:background="@color/blue_below"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/made_by_play2_with_love"
-                    android:id="@+id/below"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Source"
-                    android:layout_marginStart="20dp"
-                    android:textColor="@color/black"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="About"
-                    android:layout_marginStart="20dp"
-                    android:textColor="@color/black"/>
-
-
-            </LinearLayout>
+           <GridView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+                android:id="@+id/gridView"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:verticalSpacing="20dp"
+                android:horizontalSpacing="20dp"
+               android:columnWidth="100dp"
+               android:layout_margin="10dp"
+                android:numColumns="2"/>
 
         </LinearLayout>
 

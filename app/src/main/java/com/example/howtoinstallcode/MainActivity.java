@@ -5,11 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.example.howtoinstallcode.codeclass.Datum;
+import com.example.howtoinstallcode.codeclass.Response;
+import com.example.howtoinstallcode.handler.APIInterface;
+import com.example.howtoinstallcode.handler.APIClient;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,68 +28,39 @@ public class MainActivity extends AppCompatActivity {
     public ImageView [] imageViews = new ImageView[0];
     public Map<ImageView, Object> lists = new HashMap<>();
 
+    private APIInterface apiInterface;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        apiInterface = APIClient.getClient().create(APIInterface.class);
 
-        cpp = findViewById(R.id.cpp);
-        c = findViewById(R.id.c);
-        cSharp = findViewById(R.id.csharp);
-        ruby = findViewById(R.id.ruby);
-        git = findViewById(R.id.git);
-        html = findViewById(R.id.html);
-        java = findViewById(R.id.java);
-        python = findViewById(R.id.python);
-        javascript = findViewById(R.id.javascript);
-        rpl = findViewById(R.id.rpl);
+        Call<Response> call = apiInterface.getJson();
+        call.enqueue(new Callback<Response>() {
 
-        setImageViews();
+            @Override
+            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                Response response1 = response.body();
+                Log.d("TAG", "onResponse: " + response1.getMessage());
 
-        lists.put(cpp, CPP.class);
-        lists.put(c, C.class);
-        lists.put(cSharp, CSharp.class);
-        lists.put(ruby, Ruby.class);
-        lists.put(git, GIT.class);
-        lists.put(html, HTML.class);
-        lists.put(java, Java.class);
-        lists.put(python, Python.class);
-        lists.put(javascript, JavaScript.class);
-        lists.put(rpl, RProgrammingLanguage.class);
+                int status = response1.getStatus();
+                String message = response1.getMessage();
+                List<Datum> data = response1.getData();
+            }
+
+            @Override
+            public void onFailure(Call<Response> call, Throwable t) {
+                call.cancel();
+            }
+        })
+
+        GridView gridView = findViewById(R.id.gridView);
 
 
-        onclick();
 
     }
-
-    public void setImageViews() {
-        cpp.setImageResource(R.drawable.cpp);
-        c.setImageResource(R.drawable.c);
-        cSharp.setImageResource(R.drawable.csharp);
-        git.setImageResource(R.drawable.git);
-        ruby.setImageResource(R.drawable.ruby);
-        html.setImageResource(R.drawable.html);
-        java.setImageResource(R.drawable.java);
-        python.setImageResource(R.drawable.py);
-        javascript.setImageResource(R.drawable.js);
-        rpl.setImageResource(R.drawable.rplang);
-    }
-
-    public void onclick() {
-
-        for (Map.Entry<ImageView, Object> i : lists.entrySet()) {
-            i.getKey().setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent((Context) MainActivity.this, (Class<?>) i.getValue());
-                    startActivity(intent);
-                }
-            });
-        }
-
-    }
-
-
 
 }
