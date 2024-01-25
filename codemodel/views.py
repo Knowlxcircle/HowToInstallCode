@@ -45,7 +45,7 @@ class FrontButtonList(APIView):
         # except Exception:
         #     return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-class Definition(APIView):
+class DefinitionView(APIView):
     def get(self, request):
         try:
             data = []

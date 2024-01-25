@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call<Response> call, Throwable t) {
                 call.cancel();
             }
-        })
+        });
 
         GridView gridView = findViewById(R.id.gridView);
 
