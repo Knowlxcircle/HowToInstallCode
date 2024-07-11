@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 Response response1 = response.body();
                 Log.d("TAG", "onResponse: " + response1.getMessage());
 
+
                 int status = response1.getStatus();
                 String message = response1.getMessage();
                 List<Datum> data = response1.getData();

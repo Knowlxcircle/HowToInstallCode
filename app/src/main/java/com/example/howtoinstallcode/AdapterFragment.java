@@ -43,7 +43,7 @@ public class AdapterFragment extends BaseAdapter {
         }
 
         ImageView imageView = view.findViewById(R.id.front_button);
-
+        imageView.setImageResource();
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

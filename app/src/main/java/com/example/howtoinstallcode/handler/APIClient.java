@@ -15,7 +15,7 @@ public class APIClient {
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://localhost:8000/")
+                .baseUrl("https://howtoinstallcode-production.up.railway.app")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
