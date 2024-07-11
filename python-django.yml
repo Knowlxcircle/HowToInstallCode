@@ -1,0 +1,14 @@
+features:
+  - 'python stable'
+  - postgresql
+nginx:
+  root: public_html/public
+  passenger:
+    enabled: 'on'
+    python: .pyenv/shims/python
+commands:
+  - 'test -f requirements.txt && pip install -r $_ || pip install django'
+  - 'sed -i "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \[''${DOMAIN}''\]/g" howtoinstallcode/settings.py'
+  - 'echo "from howtoinstallcode.wsgi import application" > howtoinstallcode_wsgi.py'
+  - 'python manage.py migrate || true'
+source: 'https://github.com/Knowlxcircle/HowToInstallCode'
