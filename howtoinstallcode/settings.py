@@ -43,6 +43,12 @@ CORS_ALLOWED_ORIGINS = [
     "https://howtoinstallcode-evcucdg3hecffmas.southeastasia-01.azurewebsites.net"
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000", 
+    "https://howtoinstallcode.domcloud.dev", 
+    "https://howtoinstallcode-evcucdg3hecffmas.southeastasia-01.azurewebsites.net"
+]
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -53,12 +59,14 @@ INSTALLED_APPS = [
     "codemodel",
     "rest_framework",
     "corsheaders",
+    "whitenoise.runserver_nostatic",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
