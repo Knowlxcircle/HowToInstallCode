@@ -24,17 +24,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-v3^0fa1ij@^x-30w1)593n0s=6va_ehjx#0x!0*$%364xu=7&o"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ.get("DEBUG") == "True":
+    DEBUG = True
+else:
+    DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*", "howtoinstallcode.domcloud.dev", "howtoinstallcode-evcucdg3hecffmas.southeastasia-01.azurewebsites.net"]
 
 
 # Application definition
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "https://howtoinstallcode.domcloud.dev", "https://howtoinstallcode-evcucdg3hecffmas.southeastasia-01.azurewebsites.net"]
-
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000", 
+    "https://howtoinstallcode.domcloud.dev", 
+    "https://howtoinstallcode-evcucdg3hecffmas.southeastasia-01.azurewebsites.net"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
