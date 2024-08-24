@@ -40,7 +40,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", 
     "https://howtoinstallcode.domcloud.dev", 
-    "https://howtoinstallcode-evcucdg3hecffmas.southeastasia-01.azurewebsites.net"]
+    "https://howtoinstallcode-evcucdg3hecffmas.southeastasia-01.azurewebsites.net"
+]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -129,11 +130,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "staticfiles/"
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles")]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
