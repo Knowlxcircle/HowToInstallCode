@@ -31,6 +31,10 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "https://howtoinstallcode.domcloud.dev", "https://howtoinstallcode-evcucdg3hecffmas.southeastasia-01.azurewebsites.net"]
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
