@@ -6,16 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.util.Log;
 
-import com.example.howtoinstallcode.codeclass.Response;
+import com.example.howtoinstallcode.codeclass.Datum;
+import com.example.howtoinstallcode.codeclass.Howtoinstallcode;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdapterFragment extends BaseAdapter {
     private Context context;
-    private ArrayList<Response> data;
+    private List<Datum> data;
 
-    public AdapterFragment(Context context, ArrayList<Response> data) {
+    public AdapterFragment(Context context, List<Datum> data) {
         this.context = context;
         this.data = data;
     }
@@ -43,7 +46,12 @@ public class AdapterFragment extends BaseAdapter {
         }
 
         ImageView imageView = view.findViewById(R.id.front_button);
-        imageView.setImageResource();
+        int resourceId = context.getResources().getIdentifier(data.get(i).getProgramName(), "drawable", context.getPackageName());
+        Log.d("TAG", "getViews: " + resourceId);
+        Log.d("TAG", "getViews: " + data.get(i).getProgramName());
+
+        imageView.setImageResource(resourceId);
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
