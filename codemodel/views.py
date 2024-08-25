@@ -46,18 +46,24 @@ class FrontButtonList(APIView):
         #     return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class DefinitionView(APIView):
-    def get(self, request):
+    def get(self, request, id):
         try:
-            data = []
-            definition = Definition.objects.all()
-            for i in definition:
-                serializer = DefinitionSerializer(i).data
-                data.append(serializer)
+            
+            front_button = FrontButton.objects.get(id=id)
+            definition = Definition.objects.get(front_button=front_button)
+            serializer = DefinitionSerializer(definition).data
+            
+            # Fetch the inside_fragment related to the front_button
+            inside_fragment = InsideFragment.objects.filter(frontbutton=front_button)
+            serializer_inside_fragment = InsideFragmentSerializer(inside_fragment, many=True).data
 
             response_data = {
                 'status': status.HTTP_200_OK,
                 'message': "sukses",
-                'data': data,
+                'data': {
+                    'definition': serializer,  # Not a list, but a single object
+                    'inside_fragment': serializer_inside_fragment  # This remains a list
+                }
             }
 
             # Convert the response data to JSON format

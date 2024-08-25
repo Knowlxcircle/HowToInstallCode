@@ -50,7 +50,7 @@ class Definition(models.Model):
     program_name = models.CharField(max_length=100, blank=True, null=True)
     image = models.ImageField(upload_to=lowercase_filename, blank=True, null=True)
     url_image = models.CharField(max_length=100, blank=True, null=True)
-    front_button = models.ForeignKey(FrontButton, on_delete=models.CASCADE)
+    front_button = models.OneToOneField(FrontButton, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
         # Convert logo_name to lowercase before saving
